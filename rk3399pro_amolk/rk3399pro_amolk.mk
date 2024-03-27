@@ -38,6 +38,16 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 PRODUCT_PACKAGES += \
     SoundRecorder
 
+BOARD_SEPOLICY_DIRS += vendor/rockchip/hardware/interfaces/neuralnetworks/1.0/default/sepolicy
+
+PRODUCT_PACKAGES += \
+    public.libraries-rockchip \
+    librknn_api_android \
+    librknnhal_bridge.rockchip \
+    rockchip.hardware.neuralnetworks@1.0-impl \
+    rockchip.hardware.neuralnetworks@1.0-service \
+    rknn_server
+
 PRODUCT_PACKAGE_OVERLAYS += device/rockchip/rk3399/rk3399pro_amolk/overlay
 # Get the long list of APNs
 PRODUCT_COPY_FILES += vendor/rockchip/common/phone/etc/apns-full-conf.xml:system/etc/apns-conf.xml
