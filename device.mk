@@ -138,6 +138,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/dptx.bin:root/lib/firmware/rockchip/dptx.bin
 
+# Use FUSE passthrough
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.fuse.passthrough.enable=true
 #
 #add Rockchip properties here
 #
