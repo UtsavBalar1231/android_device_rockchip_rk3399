@@ -56,3 +56,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.version = 1.0.0 \
     ro.product.ota.host = 192.168.1.1:8888 \
     ro.sf.lcd_density = 240
+
+PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.device.primary=HDMI-A
+PRODUCT_PROPERTY_OVERRIDES += vendor.hwc.device.extend=DSI
