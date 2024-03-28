@@ -48,6 +48,13 @@ PRODUCT_PACKAGES += \
     rockchip.hardware.neuralnetworks@1.0-service \
     rknn_server
 
+PRODUCT_COPY_FILES += \
+	external/wan_binaries/init.gprs-pppd:$(TARGET_COPY_OUT_VENDOR)/etc/init.gprs-pppd \
+	external/wan_binaries/ip-down-ppp0:$(TARGET_COPY_OUT_VENDOR)/etc/ppp/ip-down-ppp0 \
+	external/wan_binaries/ip-up-ppp0:$(TARGET_COPY_OUT_VENDOR)/etc/ppp/ip-up-ppp0 \
+	external/wan_binaries/libreference-ril-gosuncn.so:$(TARGET_COPY_OUT_VENDOR)/lib/libreference-ril-gosuncn.so \
+	external/wan_binaries/netcfg:$(TARGET_COPY_OUT_VENDOR)/bin/netcfg
+
 PRODUCT_PACKAGE_OVERLAYS += device/rockchip/rk3399/rk3399pro_amolk/overlay
 # Get the long list of APNs
 PRODUCT_COPY_FILES += vendor/rockchip/common/phone/etc/apns-full-conf.xml:system/etc/apns-conf.xml
