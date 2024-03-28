@@ -14,7 +14,11 @@ PRODUCT_KERNEL_DTS := rk3399pro-amolk-android
 # AB image definition
 BOARD_USES_AB_IMAGE := false
 BOARD_ROCKCHIP_VIRTUAL_AB_ENABLE := false
-BOARD_HAS_RK_4G_MODEM := false
+# enable 3g dongle
+BOARD_HAVE_DONGLE := true
+# for rk 4g modem
+BOARD_HAS_RK_4G_MODEM := true
+
 
 ifeq ($(strip $(BOARD_USES_AB_IMAGE)), true)
     include device/rockchip/common/BoardConfig_AB.mk
