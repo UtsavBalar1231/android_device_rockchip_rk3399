@@ -43,7 +43,7 @@ BOARD_AVB_ENABLE := false
 # Disable emulator for "make dist" until there is a 64-bit qemu kernel
 BUILD_EMULATOR := false
 
-TARGET_BOARD_PLATFORM := rk3399
+TARGET_BOARD_PLATFORM ?= rk3399
 TARGET_BOARD_PLATFORM_GPU := mali-t860
 BOARD_USE_DRM := true
 
@@ -118,20 +118,20 @@ BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 3
 # camera enable
 BOARD_CAMERA_SUPPORT := true
 BOARD_CAMERA_SUPPORT_EXT := true
-ALLOW_MISSING_DEPENDENCIES=true
+ALLOW_MISSING_DEPENDENCIES ?=true
 
 #Config omx to support codec type.
 BOARD_SUPPORT_VP9 := true
 BOARD_SUPPORT_VP6 := false
 
 #for camera autofocus support
-CAMERA_SUPPORT_AUTOFOCUS=true
+CAMERA_SUPPORT_AUTOFOCUS ?= true
 
 # ANDROID HDMI
 BOARD_SHOW_HDMI_SETTING := true
 
 # for ethernet
-BOARD_HS_ETHERNET := true
+BOARD_HS_ETHERNET ?= true
 
 # for dynamaic afbc target 
 BOARD_HS_DYNAMIC_AFBC_TARGET := false
